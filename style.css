@@ -1,316 +1,407 @@
 :root {
-	--primary: #4f46e5;
-	--primary-hover: #4338ca;
-	--gradient-end: #7c3aed;
-	--text: #111827;
-	--text-muted: #6b7280;
-	--border: #e5e7eb;
-	--font-family: 'Inter', sans-serif;
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --gradient-end: #7C3AED;
+  --text: #111827;
+  --text-muted: #6B7280;
+  --border: #E5E7EB;
+  --font-family: 'Inter', sans-serif;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: var(--font-family);
-	background-color: #f8fafc;
-	color: var(--text);
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	padding: 48px 32px;
+  font-family: var(--font-family);
+  background-color: #F8FAFC;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Основна сітка з 3 колонок */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.site-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-logo:hover {
+  color: var(--primary);
+}
+
+.site-logo:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.site-nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-nav__link:hover {
+  color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.08);
+}
+
+.site-nav__link:focus {
+  color: var(--primary);
+  background-color: rgba(79, 70, 229, 0.08);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 32px;
+}
+
 .showcase {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 56px;
-	align-items: flex-start;
-	max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+  align-items: flex-start;
+  max-width: 1200px;
 }
 
 .showcase__column {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Заголовки над картками (Default / Default, Hover / Hover, Tokens) */
 .showcase__label {
-	font-size: 16px;
-	line-height: 24px;
-	margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 
 .showcase__label-bold {
-	font-weight: 600;
-	color: #6b7280;
+  font-weight: 600;
+  color: #6B7280;
 }
 
 .showcase__label-muted {
-	font-weight: 500;
-	color: #d1d5db;
-	margin-left: 4px;
+  font-weight: 500;
+  color: #D1D5DB;
+  margin-left: 4px;
 }
 
-/* Картка курсу */
 .course-card {
-	width: 358px;
-	background-color: #ffffff;
-	border: 1px solid var(--border);
-	border-radius: 16px;
-	overflow: hidden;
-	box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
-	transition:
-		transform 0.25s ease,
-		box-shadow 0.25s ease,
-		border-color 0.25s ease;
+  width: 358px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* Стан при наведенні ТА постійний стан для другої картки */
 .course-card:hover,
 .course-card--hover {
-	transform: translateY(-4px);
-	box-shadow:
-		0 20px 32px -8px rgba(79, 70, 229, 0.14),
-		0 8px 16px -4px rgba(17, 24, 39, 0.06);
-	border-color: #d1d5db;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 32px -8px rgba(79, 70, 229, 0.14), 0 8px 16px -4px rgba(17, 24, 39, 0.06);
+  border-color: #D1D5DB;
 }
 
 .course-card:hover .course-card__button,
 .course-card--hover .course-card__button {
-	background-color: var(--primary-hover);
+  background-color: var(--primary-hover);
 }
 
-/* Обкладинка картки з градієнтом і декоративними колами як у Cover.png */
 .course-card__cover {
-	position: relative;
-	width: 100%;
-	height: 200px;
-	background: linear-gradient(
-		135deg,
-		var(--primary) 0%,
-		var(--gradient-end) 100%
-	);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--gradient-end) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .course-card__decor-circle-top {
-	position: absolute;
-	top: -30px;
-	right: -30px;
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.07);
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .course-card__decor-circle-bottom {
-	position: absolute;
-	bottom: -45px;
-	left: -25px;
-	width: 130px;
-	height: 130px;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, 0.06);
+  position: absolute;
+  bottom: -45px;
+  left: -25px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .course-card__code-icon {
-	position: relative;
-	z-index: 2;
-	color: #ffffff;
-	font-size: 54px;
-	font-weight: 700;
-	letter-spacing: -2px;
-	user-select: none;
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  user-select: none;
 }
 
 .course-card__badge {
-	position: absolute;
-	top: 16px;
-	left: 16px;
-	z-index: 3;
-	background-color: #ffffff;
-	color: var(--primary);
-	font-size: 12px;
-	font-weight: 600;
-	line-height: 16px;
-	padding: 5px 12px;
-	border-radius: 999px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  background-color: #FFFFFF;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 5px 12px;
+  border-radius: 999px;
 }
 
-/* Текстовий контент картки */
 .course-card__content {
-	padding: 24px;
+  padding: 24px;
 }
 
 .course-card__category {
-	display: block;
-	font-size: 12px;
-	font-weight: 600;
-	line-height: 16px;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: var(--primary);
-	margin-bottom: 12px;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 12px;
 }
 
 .course-card__title {
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 28px;
-	color: var(--text);
-	margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--text);
+  margin-bottom: 12px;
 }
 
 .course-card__description {
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 22px;
-	color: var(--text-muted);
-	margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--text-muted);
+  margin-bottom: 18px;
 }
 
-/* Мета-рядок */
 .course-card__meta {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 8px;
-	font-size: 13px;
-	font-weight: 500;
-	line-height: 18px;
-	color: var(--text-muted);
-	padding-bottom: 20px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid var(--border);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--text-muted);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
 }
 
 .course-card__meta li:not(:last-child)::after {
-	content: '•';
-	margin-left: 8px;
-	color: #d1d5db;
+  content: "•";
+  margin-left: 8px;
+  color: #D1D5DB;
 }
 
-/* Футер картки */
 .course-card__footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .course-card__prices {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .course-card__old-price {
-	font-size: 13px;
-	font-weight: 500;
-	line-height: 18px;
-	color: #9ca3af;
-	text-decoration: line-through;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #9CA3AF;
+  text-decoration: line-through;
 }
 
 .course-card__price {
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 30px;
-	color: var(--text);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--text);
 }
 
 .course-card__button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--primary);
-	color: #ffffff;
-	font-size: 15px;
-	font-weight: 600;
-	line-height: 20px;
-	text-decoration: none;
-	padding: 12px 24px;
-	border-radius: 10px;
-	transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
 }
 
-/* Бічна панель Design tokens */
+.course-card__button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .tokens-panel {
-	width: 268px;
-	background-color: #ffffff;
-	border: 1px solid var(--border);
-	border-radius: 16px;
-	padding: 24px;
-	box-shadow: 0 2px 8px rgba(17, 24, 39, 0.03);
+  width: 268px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(17, 24, 39, 0.03);
 }
 
 .tokens-panel__heading {
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 24px;
-	color: var(--text);
-	margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--text);
+  margin-bottom: 18px;
 }
 
 .tokens-panel__group:not(:last-child) {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .tokens-panel__subheading {
-	display: block;
-	font-size: 13px;
-	font-weight: 600;
-	line-height: 18px;
-	color: var(--text-muted);
-	margin-bottom: 14px;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
 }
 
 .token-color {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	margin-bottom: 12px;
-	font-size: 13px;
-	line-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .token-color__swatch {
-	width: 24px;
-	height: 24px;
-	border-radius: 6px;
-	flex-shrink: 0;
-	border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .token-color__name {
-	font-weight: 600;
-	color: var(--text);
+  font-weight: 600;
+  color: var(--text);
 }
 
 .token-color__value {
-	font-weight: 400;
-	color: var(--text-muted);
+  font-weight: 400;
+  color: var(--text-muted);
 }
 
 .token-typo-list {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	font-size: 13px;
-	line-height: 18px;
-	color: var(--text-muted);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-muted);
 }
 
 .token-typo-list strong {
-	font-weight: 600;
-	color: var(--text);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.site-footer {
+  background-color: #E5E7EB;
+  padding: 24px 0;
+  margin-top: auto;
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-footer__logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #4B5563;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer__logo:hover,
+.site-footer__logo:focus {
+  color: var(--primary);
+}
+
+.site-footer__copyright {
+  font-size: 13px;
+  color: #4B5563;
 }
