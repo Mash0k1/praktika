@@ -1,182 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title> Картка курсу </title>
-		<link rel="preconnect" href="https://googleapis.com" />
-		<link rel="preconnect" href="https://gstatic.com" crossorigin />
-		<link
-			href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<main class="showcase">
-			<!-- Перша колонка: Default -->
-			<section class="showcase__column">
-				<div class="showcase__label">
-					<span class="showcase__label-bold">Default</span>
-					<span class="showcase__label-muted">/ Default</span>
-				</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit — Картка курсу та Design Tokens</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-				<article class="course-card">
-					<div class="course-card__cover">
-						<span class="course-card__badge">Новинка</span>
-						<div class="course-card__decor-circle-top"></div>
-						<div class="course-card__decor-circle-bottom"></div>
-						<span class="course-card__code-icon">&lt;/&gt;</span>
-					</div>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="site-logo">Logo</a>
+      <nav class="site-nav" aria-label="Головна навігація">
+        <ul class="site-nav__list">
+          <li><a href="#courses" class="site-nav__link">Курси</a></li>
+          <li><a href="#tokens" class="site-nav__link">Design Tokens</a></li>
+          <li><a href="#contacts" class="site-nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-					<div class="course-card__content">
-						<span class="course-card__category">FRONTEND</span>
-						<h2 class="course-card__title">
-							HTML &amp; CSS: від макета до робочої верстки
-						</h2>
-						<p class="course-card__description">
-							Навчись читати Figma-макет як технічне завдання, переносити
-							компоненти в код і перевіряти результат.
-						</p>
+  <main class="main-content">
+    <div class="showcase" id="courses">
+      <section class="showcase__column">
+        <div class="showcase__label">
+          <span class="showcase__label-bold">Default</span>
+          <span class="showcase__label-muted">/ Default</span>
+        </div>
 
-						<ul class="course-card__meta">
-							<li>6 тижнів</li>
-							<li>12 занять</li>
-							<li>Початковий рівень</li>
-						</ul>
+        <article class="course-card">
+          <div class="course-card__cover">
+            <span class="course-card__badge">Новинка</span>
+            <div class="course-card__decor-circle-top"></div>
+            <div class="course-card__decor-circle-bottom"></div>
+            <span class="course-card__code-icon">&lt;/&gt;</span>
+          </div>
 
-						<div class="course-card__footer">
-							<div class="course-card__prices">
-								<span class="course-card__old-price">2 990 ₴</span>
-								<span class="course-card__price">1 990 ₴</span>
-							</div>
-							<a href="#" class="course-card__button">Записатись</a>
-						</div>
-					</div>
-				</article>
-			</section>
+          <div class="course-card__content">
+            <span class="course-card__category">FRONTEND</span>
+            <h2 class="course-card__title">HTML &amp; CSS: від макета до робочої верстки</h2>
+            <p class="course-card__description">
+              Навчись читати Figma-макет як технічне завдання, переносити компоненти в код і перевіряти результат.
+            </p>
 
-			<!-- Друга колонка: Hover -->
-			<section class="showcase__column">
-				<div class="showcase__label">
-					<span class="showcase__label-bold">Hover</span>
-					<span class="showcase__label-muted">/ Hover</span>
-				</div>
+            <ul class="course-card__meta">
+              <li>6 тижнів</li>
+              <li>12 занять</li>
+              <li>Початковий рівень</li>
+            </ul>
 
-				<article class="course-card course-card--hover">
-					<div class="course-card__cover">
-						<span class="course-card__badge">Новинка</span>
-						<div class="course-card__decor-circle-top"></div>
-						<div class="course-card__decor-circle-bottom"></div>
-						<span class="course-card__code-icon">&lt;/&gt;</span>
-					</div>
+            <div class="course-card__footer">
+              <div class="course-card__prices">
+                <span class="course-card__old-price">2 990 ₴</span>
+                <span class="course-card__price">1 990 ₴</span>
+              </div>
+              <a href="#" class="course-card__button">Записатись</a>
+            </div>
+          </div>
+        </article>
+      </section>
 
-					<div class="course-card__content">
-						<span class="course-card__category">FRONTEND</span>
-						<h2 class="course-card__title">
-							HTML &amp; CSS: від макета до робочої верстки
-						</h2>
-						<p class="course-card__description">
-							Навчись читати Figma-макет як технічне завдання, переносити
-							компоненти в код і перевіряти результат.
-						</p>
+      <section class="showcase__column">
+        <div class="showcase__label">
+          <span class="showcase__label-bold">Hover</span>
+          <span class="showcase__label-muted">/ Hover</span>
+        </div>
 
-						<ul class="course-card__meta">
-							<li>6 тижнів</li>
-							<li>12 занять</li>
-							<li>Початковий рівень</li>
-						</ul>
+        <article class="course-card course-card--hover">
+          <div class="course-card__cover">
+            <span class="course-card__badge">Новинка</span>
+            <div class="course-card__decor-circle-top"></div>
+            <div class="course-card__decor-circle-bottom"></div>
+            <span class="course-card__code-icon">&lt;/&gt;</span>
+          </div>
 
-						<div class="course-card__footer">
-							<div class="course-card__prices">
-								<span class="course-card__old-price">2 990 ₴</span>
-								<span class="course-card__price">1 990 ₴</span>
-							</div>
-							<a href="#" class="course-card__button">Записатись</a>
-						</div>
-					</div>
-				</article>
-			</section>
+          <div class="course-card__content">
+            <span class="course-card__category">FRONTEND</span>
+            <h2 class="course-card__title">HTML &amp; CSS: від макета до робочої верстки</h2>
+            <p class="course-card__description">
+              Навчись читати Figma-макет як технічне завдання, переносити компоненти в код і перевіряти результат.
+            </p>
 
-			<!-- Третя колонка: Бічна панель Tokens -->
-			<aside class="showcase__column showcase__column--tokens">
-				<div class="showcase__label">
-					<span class="showcase__label-muted">Tokens</span>
-				</div>
+            <ul class="course-card__meta">
+              <li>6 тижнів</li>
+              <li>12 занять</li>
+              <li>Початковий рівень</li>
+            </ul>
 
-				<div class="tokens-panel">
-					<h3 class="tokens-panel__heading">Design tokens</h3>
+            <div class="course-card__footer">
+              <div class="course-card__prices">
+                <span class="course-card__old-price">2 990 ₴</span>
+                <span class="course-card__price">1 990 ₴</span>
+              </div>
+              <a href="#" class="course-card__button">Записатись</a>
+            </div>
+          </div>
+        </article>
+      </section>
 
-					<div class="tokens-panel__group">
-						<span class="tokens-panel__subheading">Colors</span>
+      <aside class="showcase__column showcase__column--tokens" id="tokens">
+        <div class="showcase__label">
+          <span class="showcase__label-muted">Tokens</span>
+        </div>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #4f46e5"
-							></span>
-							<span class="token-color__name">Primary</span>
-							<span class="token-color__value">#4F46E5</span>
-						</div>
+        <div class="tokens-panel">
+          <h3 class="tokens-panel__heading">Design tokens</h3>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #4338ca"
-							></span>
-							<span class="token-color__name">Primary hover</span>
-							<span class="token-color__value">#4338CA</span>
-						</div>
+          <div class="tokens-panel__group">
+            <span class="tokens-panel__subheading">Colors</span>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #7c3aed"
-							></span>
-							<span class="token-color__name">Gradient end</span>
-							<span class="token-color__value">#7C3AED</span>
-						</div>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #4F46E5;"></span>
+              <span class="token-color__name">Primary</span>
+              <span class="token-color__value">#4F46E5</span>
+            </div>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #111827"
-							></span>
-							<span class="token-color__name">Text</span>
-							<span class="token-color__value">#111827</span>
-						</div>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #4338CA;"></span>
+              <span class="token-color__name">Primary hover</span>
+              <span class="token-color__value">#4338CA</span>
+            </div>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #6b7280"
-							></span>
-							<span class="token-color__name">Text muted</span>
-							<span class="token-color__value">#6B7280</span>
-						</div>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #7C3AED;"></span>
+              <span class="token-color__name">Gradient end</span>
+              <span class="token-color__value">#7C3AED</span>
+            </div>
 
-						<div class="token-color">
-							<span
-								class="token-color__swatch"
-								style="background-color: #e5e7eb"
-							></span>
-							<span class="token-color__name">Border</span>
-							<span class="token-color__value">#E5E7EB</span>
-						</div>
-					</div>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #111827;"></span>
+              <span class="token-color__name">Text</span>
+              <span class="token-color__value">#111827</span>
+            </div>
 
-					<div class="tokens-panel__group">
-						<span class="tokens-panel__subheading">Typography — Inter</span>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #6B7280;"></span>
+              <span class="token-color__name">Text muted</span>
+              <span class="token-color__value">#6B7280</span>
+            </div>
 
-						<ul class="token-typo-list">
-							<li><strong>Title</strong> — Bold 22 / 28</li>
-							<li><strong>Price</strong> — Bold 24 / 30</li>
-							<li><strong>Body</strong> — Regular 14 / 22</li>
-							<li><strong>Button</strong> — Semi Bold 15 / 20</li>
-							<li><strong>Meta</strong> — Medium 13 / 18</li>
-							<li><strong>Label</strong> — Semi Bold 12, +8%</li>
-						</ul>
-					</div>
+            <div class="token-color">
+              <span class="token-color__swatch" style="background-color: #E5E7EB;"></span>
+              <span class="token-color__name">Border</span>
+              <span class="token-color__value">#E5E7EB</span>
+            </div>
+          </div>
+
+          <div class="tokens-panel__group">
+            <span class="tokens-panel__subheading">Typography — Inter</span>
+
+            <ul class="token-typo-list">
+              <li><strong>Title</strong> — Bold 22 / 28</li>
+              <li><strong>Price</strong> — Bold 24 / 30</li>
+              <li><strong>Body</strong> — Regular 14 / 22</li>
+              <li><strong>Button</strong> — Semi Bold 15 / 20</li>
+              <li><strong>Meta</strong> — Medium 13 / 18</li>
+              <li><strong>Label</strong> — Semi Bold 12, +8%</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container site-footer__inner">
+      <a href="#" class="site-footer__logo">Logo</a>
+      <p class="site-footer__copyright">&copy; 2023. All Rights Reserved. Privacy Policy</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
 				</div>
 			</aside>
 		</main>
